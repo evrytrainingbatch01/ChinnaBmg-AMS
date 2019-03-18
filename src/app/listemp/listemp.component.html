@@ -1,0 +1,84 @@
+<div class="container">
+<div class="panel-heading"> 
+        <h3 class="panel-title">AllEmplyeeDetails</h3>
+          </div>
+</div>
+<div class="panel panel-primary" *ngFor="let employee of employeelist">
+        
+    <div class="panel-heading">
+        <h3 class="panel-title">{{employee.name}}</h3>
+    </div>
+     <div class="panel-body">
+         <div class="col-xs-10">
+             <div class="row vertical-align">
+                    <div class="col-xs-4">
+                 <img class="imageClass" [src]="employee.photopath">
+                     </div>
+                        <div class="col-xs-8">
+
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                      Name
+                                     </div>
+                                        <div class="col-xs-6">
+                                         :{{employee.name}}
+                                        </div>  
+                                </div>
+                                <div class="row">
+                                        <div class="col-xs-6">
+                                          Email
+                                         </div>
+                                            <div class="col-xs-6">
+                                             :{{employee.email}}
+                                            </div>  
+                                    </div>
+                                    <div class="row">
+                                            <div class="col-xs-6">
+                                              Salary
+                                             </div>
+                                                <div class="col-xs-6">
+                                                 :{{employee.salary}}
+                                                </div>  
+                                        </div>
+                                        <div class="row">
+                                                <div class="col-xs-6">
+                                                  Mobile
+                                                 </div>
+                                                    <div class="col-xs-6">
+                                                     :{{employee.mobile}}
+                                                    </div>  
+                                            </div>
+                                            <div class="row">
+                                                    <div class="col-xs-6">
+                                                      Department
+                                                     </div>
+                                                        <div class="col-xs-6">
+                                                         :{{employee.department}}
+                                                        </div>  
+                                                </div>
+                                                <div class="row">
+                                                        <div class="col-xs-6">
+                                                          EntryDate
+                                                         </div>
+                                                            <div class="col-xs-6">
+                                                             :{{employee.entrydate}}
+                                                            </div>  
+                                                    </div>
+                                                    <div class="row">
+                                                            <div class="col-xs-6">
+                                                              WorkingHours
+                                                             </div>
+                                                                <div class="col-xs-6">
+                                                                 :{{employee.workinghours}}
+                                                                </div>  
+                                                        </div>
+                          </div>
+             </div>
+
+         </div>
+     </div>
+     <div class="panel-footer">
+         <button (click)='editEmp($event)'  class="btn btn-primary">Edit</button>
+         <button (click)='deleteEmp()' class="btn btn-danger">Delete</button>
+     </div>
+   </div>
